@@ -11,10 +11,10 @@
                 {{ post.title }}
             </h2>
             <div class="card-text">
-                <p>{{post.content}}</p>
+                <p>{{post.content | slice:"500"}}</p>
             </div>
             <div class="mb-2 mt-2">
-                <p>Author: {{ post.author }}</p>
+                <p>Author: {{ post.author | title}}</p>
             </div>
             <a class="btn btn-primary" href="{% url 'blog_view' post.slug %}">{{ post.title }}</a>
 
