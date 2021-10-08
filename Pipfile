@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 django = "*"
+googletrans = "==4.0.0-rc1"
 
 [dev-packages]
 
