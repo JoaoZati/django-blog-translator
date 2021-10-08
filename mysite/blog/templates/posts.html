@@ -1,8 +1,25 @@
 {% extends 'base.html' %}
 
+{% block title %}blog-posts{% endblock %}
+
 {% block content %}
+<div class='container'>
     {% for post in post_list %}
-        <a href="http://127.0.0.1:8000/{{post.slug}}">{{ post.title }}</a>
-        {{ post.author }}
+    <div class="card m-3">
+        <div class="card-body">
+            <h2 class="card-title mb-2 mt-2">
+                {{ post.title }}
+            </h2>
+            <div class="card-text">
+                <p>{{post.content}}</p>
+            </div>
+            <div class="mb-2 mt-2">
+                <p>Author: {{ post.author }}</p>
+            </div>
+            <a class="btn btn-primary" href="{% url 'blog_view' post.slug %}">{{ post.title }}</a>
+
+        </div>
+    </div>
     {% endfor %}
+</div>
 {% endblock %}
