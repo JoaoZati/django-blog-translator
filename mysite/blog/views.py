@@ -10,3 +10,7 @@ class BlogView(generic.DetailView):
 
 def home(request):
     return render(request, 'home.html')
+
+
+class AboutView(generic.TemplateView):
+    template_name = 'about.html'
