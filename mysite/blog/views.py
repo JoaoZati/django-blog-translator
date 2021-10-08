@@ -14,3 +14,8 @@ def home(request):
 
 class AboutView(generic.TemplateView):
     template_name = 'about.html'
+
+
+class PostList(generic.ListView):
+    queryset = Post.objects.filter(status=1).order_by('-date_create')
+    template_name = 'posts.html'
