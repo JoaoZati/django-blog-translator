@@ -6,11 +6,15 @@
         <div class="card-body bg-secondary">
             <h1 class="text-white bg-secondary">About Page</h1>
             <p class="text-white bg-secondary">
-                This is a simple web aplication in envolving bootstrap in front-end and django in back-end
+                This is a simple web aplication in envolving bootstrap in front-end and django in back-end.
             </p>
             <p class="text-white bg-secondary">
-                You can see in Posts all the posts made by the admin and click in the link to be redirected to the
-                slug of each post
+                You can see in <a class="text-white" href="{% url 'posts_view' %}">Posts</a> all the posts made by the admin and click in the link to be redirected to the
+                slug of each post.
+            </p>
+            <p class="text-white bg-secondary">
+                Also was developed one translator to show how to apply functions in the aplication, in  <a class="text-white" href="{% url 'translator_view' %}">Translator</a>
+                just input some english text on the left and press Submit and the aplication will translate the text to portuguese.
             </p>
         </div>
     </div>

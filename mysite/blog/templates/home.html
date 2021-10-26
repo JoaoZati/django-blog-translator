@@ -3,8 +3,15 @@
 {% block title %}blog-home{% endblock %}
 
 {% block content %}
-    {% for post in post_list %}
-        {{ post.title }}
-        {{ post.author }}
-    {% endfor %}
+<center>
+    <div class="container-fluid">
+        <div class="card mt-3 ml-3 mr-3">
+            <h1>Home Page</h1>
+            <p>Thank you for come here to see my project</p>
+            <p>To see how this page works go to <a href="{% url 'about_view' %}">About</a></p>
+            <p>To test how posts works go to <a href="{% url 'posts_view' %}">Posts</a></p>
+            <p>To test the translator go to <a href="{% url 'translator_view' %}">Translator</a></p>
+        </div>
+    </div>
+</center>
 {% endblock %}
