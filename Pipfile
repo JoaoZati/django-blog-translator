@@ -7,6 +7,7 @@ name = "pypi"
 django = "*"
 googletrans = "==4.0.0-rc1"
 gunicorn = "*"
+django-heroku = "*"
 
 [dev-packages]
 
